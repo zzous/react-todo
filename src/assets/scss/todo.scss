@@ -9,7 +9,6 @@
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.04);
   background: white;
 }
-
 .TodoHeadBlock {
   padding-top: 48px;
   padding-left: 32px;
@@ -33,14 +32,12 @@
     font-weight: bold;
   }
 }
-
 .TodoListBlock {
   flex: 1;
   padding: 20px 32px;
   padding-bottom: 48px;
   overflow-y: auto;
 }
-
 .CircleButton {
   background: #38d9a9;
   &:hover {
@@ -49,7 +46,6 @@
   &:active {
     background: #20c997;
   }
-
   z-index: 5;
   cursor: pointer;
   width: 80px;
@@ -82,7 +78,6 @@
     transform: translate(-50%, 50%) rotate(45deg);
   }
 }
-
 .InsertFormPositioner {
   position: absolute;
   bottom: 0;
