@@ -1,4 +1,5 @@
 import NoMatch from '@/components/hoc/Nomatch';
+import MemberRoute from './MemberRoute';
 import TodoRoute from './TodoRoute';
 // import MainRoute from './main/MainRoute';
 
@@ -6,6 +7,7 @@ import TodoRoute from './TodoRoute';
 const routes = [
   // ...MainRoute,
   ...TodoRoute,
+  ...MemberRoute,
   {
     path: '*',
     element: <NoMatch />

@@ -1,4 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
+import { useHistory } from 'react-router';
+import { Route, Link } from 'react-router-dom';
+
 import {
   modalStatus,
   setModalStatus
@@ -6,7 +9,7 @@ import {
 
 import Buttons from '@/components/ui/Buttons';
 
-export function Header(props) {
+export function Header(props, history) {
   const isModalVisible = useSelector(modalStatus);
   const dispatch = useDispatch();
 
@@ -18,6 +21,10 @@ export function Header(props) {
       }
 
       <Buttons type="button" className="success" onClick={() => dispatch(setModalStatus(true))}>Modal</Buttons>
+      <Buttons type="button" className="success" onClick={() => { history.push('/member'); }}>Join</Buttons>
+      {/* <Route path='/member'>Route Join</Route> */}
+      <Link to='/'>Home</Link>
+      <Link to='/member/join'>Join</Link>
     </div>
   );
 }

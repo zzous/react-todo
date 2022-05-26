@@ -16,6 +16,9 @@
 // }
 
 // export default App;
+
+import '@/assets/styles/App.scss';
+
 import { useRoutes } from 'react-router-dom';
 import routes from '@/routes';
 
