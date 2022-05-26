@@ -17,6 +17,7 @@ function App() {
         <TodoHead />
         <TodoList />
         <TodoCreate />
+        
       </TodoTemplate>
     </TodoProvider>
   );
