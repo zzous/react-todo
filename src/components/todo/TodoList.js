@@ -1,5 +1,5 @@
 import TodoItem from './TodoItem';
-import { useTodoState } from '@/TodoContext';
+import { useTodoState } from '@/constants/TodoContext';
 
 function TodoList() {
   const todos = useTodoState();
