@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Outlet } from 'react-router-dom';
 
-// import Header from '@/components/layouts/Header';
-// import Footer from '@/components/layouts/Footer';
+import Header from '@/components/layouts/Header';
+import Footer from '@/components/layouts/Footer';
 
 // Components
 import Modal from '@/components/ui/Modal';
@@ -22,7 +22,7 @@ class Layout extends React.Component {
 
     return (
       <div id="wrap">
-        {/* <Header /> */}
+        <Header />
         <div id="contents">
           <Outlet />
           {
@@ -32,7 +32,7 @@ class Layout extends React.Component {
             </Modal>
           }
         </div>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     );
   }
