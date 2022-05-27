@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-// import { auth } from '@/firebaseConfig';
 import { useEffect } from 'react';
+
+import { createUserWithEamil } from '@/constants/MemberContext';
 
 import Buttons from '@/components/ui/Buttons';
 
@@ -13,8 +13,10 @@ function Join() {
   const [registEmail, setEmail] = useState('');
   const [registPassword, setPassword] = useState('');
 
-  const register = async () => {
+  const register = async (event) => {
     try {
+      event.preventDefault();
+      createUserWithEamil(registEmail, registPassword);
       // const user = createUserWithEmailAndPassword(
       //   auth,
       //   registEmail,
@@ -28,6 +30,7 @@ function Join() {
 
   return (
     <div>
+      <h1>Join</h1>
       <input type="text" placeholder="Email" />
       <input type="password" placeholder="password" />
       <Buttons type="button" className="success" onClick={register}>Join</Buttons>
