@@ -26,9 +26,11 @@ export function Header(props, history) {
       }
 
       <Buttons type="button" className="success" onClick={() => dispatch(setModalStatus(true))}>Modal</Buttons>
-      <Buttons type="button" className="success" onClick={() => { history.push('/member'); }}>Join</Buttons>
+      {/* <Buttons type="button" className="success" onClick={() => { history.push('/member'); }}>Join</Buttons> */}
       {/* <Route path='/member'>Route Join</Route> */}
       <Link to='/'>Home</Link>
+      <Link to='/member'>Member</Link>
+      <Link to='/member/login'>Login</Link>
       <Link to='/member/join'>Join</Link>
     </div>
   );
