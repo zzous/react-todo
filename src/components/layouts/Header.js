@@ -1,6 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { useHistory } from 'react-router';
-import { Route, Link } from 'react-router-dom';
+// import { useHistory } from 'react-router';
+import { Link } from 'react-router-dom';
+import { auth } from '@/firebaseConfig';
+import { useEffect } from 'react';
 
 import {
   modalStatus,
@@ -10,12 +12,15 @@ import {
 import Buttons from '@/components/ui/Buttons';
 
 export function Header(props, history) {
+  useEffect(() => {
+    console.log('## render joinPage', auth);
+  });
   const isModalVisible = useSelector(modalStatus);
   const dispatch = useDispatch();
 
   return (
     <div id="header">
-      header
+      h1
       {
         isModalVisible && <div id="public-sample-image"></div>
       }
